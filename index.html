@@ -88,6 +88,70 @@
                <li data-target="#banner1" data-slide-to="1"></li>
                <li data-target="#banner1" data-slide-to="2"></li>
             </ol>
+
+            <style type="text/css">
+               #aviso {
+                  position: fixed;
+                  top: 20px;
+                  right: -200px;
+                  width: 200px;
+                  height: 100px;
+                  background-color: #2a662c;
+                  color: white;
+                  border-radius: 10px;
+                  padding: 10px;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                  animation: mostrar 0.5s ease-out 10s forwards;
+                  z-index: 9999;
+               }
+            
+               #boton-aceptar {
+                  background-color: #2a662c;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  padding: 10px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin-top: 10px;
+                  cursor:pointer;
+               }
+            
+               #boton-aceptar:hover {
+                  background-color: #3e8e41;
+               }
+            
+               @keyframes mostrar {
+                  100% {
+                     right: 20px;
+                  }
+               }
+            </style>
+            
+            <div id="aviso">
+               <p>Ya hacemos envíos internacionales</p>
+               <button id="boton-aceptar" onclick="cerrarAviso()">Aceptar</button>
+            </div>
+            
+            <script>
+               // Comprobamos si el valor ya está almacenado
+               if (!localStorage.getItem("boxShown")) {
+                 // Esperamos 8 segundos y mostramos el cuadro
+                 setTimeout(function() {
+                   document.getElementById("aviso").style.display = "block";
+                   // Almacenamos el valor para indicar que ya se ha mostrado el cuadro
+                   localStorage.setItem("boxShown", true);
+                 }, 8000);
+               }
+            
+               function cerrarAviso() {
+                 document.getElementById("aviso").style.display = "none";
+               }
+            </script>
+            
+
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
