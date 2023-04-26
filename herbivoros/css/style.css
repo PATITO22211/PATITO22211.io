@@ -246,14 +246,29 @@ button {
     float: left;
 }
 
-.logo {
-    height: 100%;
-    width: 80%;
-    float: left;
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+    size: 300px;
+  }
+  
+  
+  .logo {
+    height: 300px;
+    width: 600px;
+    display: block;
+    margin: 0 auto;
     text-align: center;
-    padding: 20px 0px;
-}
-
+    padding-top: 20px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  
 
 /* logo section end */
 
@@ -471,8 +486,9 @@ a:hover {
 
 .banner_section {
     width: 100%;
-    float: left;
+    float: right;
     padding-bottom: 60px;
+    margin-top: 100px;
 }
 
 .banner_taital {
