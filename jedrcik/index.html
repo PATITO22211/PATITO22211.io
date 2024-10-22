@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jedrick😍🍆</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sixtyfour+Convergence&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sixtyfour+Convergence&display=swap');
+
+        .roboto-mono {
+            font-family: "Roboto Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: 100%;
+            font-style: normal;
+        }
+        body {
+            background-color: #202020;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+            color: #ff69b4; /* Color rosa para el título */
+        }
+        h2 {
+            font-family: Sixtyfour Convergence;
+        }
+        h4 {
+            font-size: 1.5em;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            max-width: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            cursor: pointer; /* Hacer que las imágenes sean clicables */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .sub {
+            font-size: 3rem;
+            font-style: normal;
+        }
+        .pedro {
+            color: aqua;
+            font-size: 4rem;
+        }
+        footer {
+            margin-top: 50px;
+            color: #ff69b4;
+        }
+
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro transparente */
+            animation: fadeIn 0.5s ease; /* Animación de fade-in */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 600px; /* Ajustamos un tamaño máximo para las imágenes */
+            max-height: 400px; /* Tamaño máximo para que todas las imágenes tengan el mismo tamaño */
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            animation: zoomIn 0.5s ease; /* Animación de zoom-in */
+        }
+
+        /* Botón de cerrar el modal */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ff69b4;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Botón de Instagram con animación de colores fríos */
+        .instagram-btn {
+            background: linear-gradient(45deg, #00c9ff, #92fe9d); /* Colores iniciales */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 3em;
+            font-family: Lilita One;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+            animation: colorChange 5s infinite alternate; /* Animación infinita */
+        }
+
+        /* Animación de colores fríos */
+        @keyframes colorChange {
+            0% { background: linear-gradient(45deg, #00c9ff, #92fe9d); } /* Azul y verde */
+            25% { background: linear-gradient(45deg, #5f72ff, #9a6aff); } /* Azul oscuro y morado */
+            50% { background: linear-gradient(45deg, #00d4ff, #00ffdd); } /* Cian y aqua */
+            75% { background: linear-gradient(45deg, #3a7bd5, #00d2ff); } /* Azul eléctrico */
+            100% { background: linear-gradient(45deg, #667db6, #0082c8); } /* Azul frío */
+        }
+
+        /* Sección para el iframe de Spotify */
+        .spotify-section {
+            margin: 20px 0;
+        }
+
+        /* Anuncios de broma */
+        .ad {
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #ff69b4;
+        }
+
+        /* Animación de aparición del modal */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Animación de zoom-in para la imagen */
+        @keyframes zoomIn {
+            from { transform: scale(0.5); }
+            to { transform: scale(1); }
+        }
+
+                /* Notificación */
+
+                body {
+            background-color: #202020;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        /* Notificación */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #002fff;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            font-size: 1.2em;
+            width: 300px;
+            text-align: left;
+        }
+        .notification .contenido {
+            padding-top: 1px;
+
+            
+        }
+        .contenedor {
+            align-items: self-start;
+        }
+
+        .notification img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .notification .close {
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 5px;
+            margin-top: 1px;
+            float: right;
+        }
+
+        .notification input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .notification button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .notification button:hover {
+            background-color: #ff85bf;
+        }
+        .copy {
+            font-size: 5cqh;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>J e d r i c k😍🍆</h1>
+
+    <!-- Descripción corta -->
+    <h4 class="roboto-mono h4" style="font-size: 2rem;">Este es Jedrick, el influencer más top de todos. ¡Síguelo y escucha su música favorita!</h4>
+    <h4 class="roboto-mono h4" style="font-size: 2.5rem;">Este es el más guapo de todo MID</h4>
+
+    <!-- Botón de Instagram -->
+    <a href="https://www.instagram.com/jedrickzx_/" target="_blank">
+        <button class="instagram-btn">El insta de este guapo</button>
+    </a>
+
+    <!-- Notificación de broma -->
+    <div class="notification" id="notification">
+        <span class="close" onclick="closeNotification()">X</span>
+        <img src="maria.png" alt="Foto de María">
+        <div class="contenedor">
+
+            <p class="contenido" id="notification-message">María está a 5 kilómetros de ti y quiere hablarte 😲</p>
+
+        </div>
+        <input type="text" placeholder="Escríbele y cuentale cuanto la amas...">
+        <button onclick="sendMessage()">Enviar mensaje</button>
+    </div>
+    <!-- Sección de Spotify -->
+    <div class="spotify-section">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1guqLAietdCCGzd1JOIw3U?utm_source=generator" width="550" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/57DZJLuPk9a5ULzdER3ZFy?utm_source=generator" width="550" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    </div>
+
+    <div class="masinfo">
+        <h2>JAJAJAJ</h2>
+        <h1>Todas mueren por mi...</h1>
+        <h1 class="ad">🔥</h1>
+    </div>
+
+    <!-- Galería de imágenes -->
+    <div class="gallery">
+        <img src="foto1.png" alt="Foto de Jedrick 1" onclick="openModal(this)">
+        <img src="foto2.jpg" alt="Foto de Jedrick 2" onclick="openModal(this)">
+        <img src="image.png" alt="Foto de Jedrick 3" onclick="openModal(this)">
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgModal">
+    </div>
+
+    <footer>
+        <p class="sub">bro🗣️🔥!</p>
+        <p class="pedro">no doy autógrafos, gracias.</p>
+        <p class="copy">&copy; 2024 jedrickzx_</p>
+    </footer>
+    <script>
+        // Función para abrir el modal con la imagen seleccionada
+        function openModal(imgElement) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("imgModal");
+
+            modal.style.display = "block";  // Mostrar el modal
+            modalImg.src = imgElement.src;  // Cargar la imagen seleccionada en el modal
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";  // Ocultar el modal
+        }
+        function showNotification() {
+            document.getElementById("notification").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("notification").style.display = "none";
+            }, 4000);
+        }
+
+        let closeCount = 0;
+
+        // Función para cambiar el mensaje dependiendo de cuántas veces se ha cerrado la notificación
+        function updateNotificationMessage() {
+            const messageElement = document.getElementById("notification-message");
+
+            if (closeCount === 0) {
+                messageElement.textContent = "María está a 5 kilómetros de ti y quiere hablarte 😲";
+            } else if (closeCount === 1) {
+                messageElement.textContent = "María sigue esperando... 😏";
+            } else if (closeCount === 2) {
+                messageElement.textContent = "¿De verdad no vas a contestarle? 😕";
+            } else if (closeCount === 3) {
+                messageElement.textContent = "María se está cansando... 💔";
+            } else {
+                messageElement.textContent = "María te ha bloqueado 🚫 PIDELE PERDÓN!";
+            }
+        }
+
+        function showNotification() {
+            document.getElementById("notification").style.display = "block";
+        }
+
+        function closeNotification() {
+            document.getElementById("notification").style.display = "none";
+            closeCount++;
+            updateNotificationMessage();
+        }
+
+        function sendMessage() {
+            const input = document.querySelector('.notification input[type="text"]').value.trim(); // Obtén el valor del input y elimina espacios en blanco
+            if (input.toLowerCase() === "perdon") { // Comparar el input con "perdon" sin importar mayúsculas o minúsculas
+                alert('María no te va a perdonar, Te odia y te va a quemar en Twitter');
+            } else if (input.toLowerCase() === "hola maria") {
+                alert('Hola guapo, Dominante, alfa, poderoso, asombroso😏🔥')
+            }
+            else {
+                alert(`María se desepcionó de ti, no sabes sacar plática. Literalmente dijiste: ${input}`);
+            }
+            document.querySelector('.notification input[type="text"]').value = ''; // Limpiar el input después de enviar el mensaje
+        }
+
+        // Mostrar la notificación cada 5 segundos sin cerrarse automáticamente
+        setInterval(showNotification, 5000);
+
+
+    </script>
+
+</body>
+</html>
